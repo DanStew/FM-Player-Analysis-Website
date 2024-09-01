@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style.scss"
+
+//Importing the needed react functions
+import { useState } from "react";
+
+//Importing the neccesary components
+import Home from "./Components/Home";
+import Photos from "./Components/Photos"
+import Download from "./Components/Download"
+import Information from "./Components/Information"
 
 function App() {
+
+  //Storing the current screen that we are on
+  const [currentScreen,setCurrentScreen] = useState("Home")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {currentScreen == "Home" ? <Home setCurrentScreen={(screen) => setCurrentScreen(screen)}/> : <div style={{display:"none"}}></div>}
+      {currentScreen == "Photos" ? <Photos setCurrentScreen={(screen) => setCurrentScreen(screen)}/> : <div style={{display:"none"}}></div>}
+      {currentScreen == "Download" ? <Download setCurrentScreen={(screen) => setCurrentScreen(screen)}/> : <div style={{display:"none"}}></div>}
+      {currentScreen == "Information" ? <Information setCurrentScreen={(screen) => setCurrentScreen(screen)}/> : <div style={{display:"none"}}></div>}
     </div>
   );
 }
