@@ -1,14 +1,14 @@
 import BottomBanner from "./BottomBanner"
 import TopBanner from "./TopBanner"
 
-function Photos({setCurrentScreen}){
+function Photos(){
     return(
         <div className="screen">
-            <TopBanner screenName="Home" setCurrentScreen={(screen) => setCurrentScreen(screen)}/>
+            <TopBanner screenName="Home"/>
             <div className="photos mainBody flexItems">
                 Photos
             </div>
-            <BottomBanner screenName="Download" setCurrentScreen={(screen) => setCurrentScreen(screen)}/>
+            <BottomBanner screenName="Download"/>
         </div>
     )
 }

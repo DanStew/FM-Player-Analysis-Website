@@ -1,8 +1,12 @@
-function Home({setCurrentScreen}){
+import BottomBanner from "./BottomBanner"
+
+function Home(){
     return(
-        <div>
-            Home
-            <button onClick={() => setCurrentScreen("Information")}></button>
+        <div className="screen">
+            <div className="home mainBody flexItems">
+                Home
+            </div>
+            <BottomBanner screenName="Photos"/>
         </div>
     )
 }

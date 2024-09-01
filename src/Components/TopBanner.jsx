@@ -1,6 +1,15 @@
-function TopBanner({screenName,setCurrentScreen}){
+function TopBanner({screenName}){
+
+    function goToSection(){
+        const aTag = document.createElement("a")
+        aTag.href = "#" + screenName
+        document.body.appendChild(aTag)
+        aTag.click()
+        aTag.remove()
+    }
+
     return(
-        <div onClick={() => setCurrentScreen(screenName)} className="banner topBanner flexItems">
+        <div onClick={() => goToSection()}className="banner topBanner flexItems">
             <div className="bannerContent flexItems">
                 <p>{screenName}</p>
             </div>
