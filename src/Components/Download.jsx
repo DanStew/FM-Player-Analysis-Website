@@ -6,7 +6,7 @@ function Download(){
     //Function to implement the download of files for the user
     function downloadFiles(){
         const aTag = document.createElement("a")
-        aTag.href = "http://localhost:3000/FMDataAnalysis.zip"
+        aTag.href = "https://fm-player-analysis.web.app/FMDataAnalysis.zip"
         aTag.setAttribute("download","FMDataAnalysis")
         document.body.appendChild(aTag)
         aTag.click()
@@ -24,7 +24,7 @@ function Download(){
                     <p className="regular">Enjoy!</p>
                 </div>
                 <div className="button flexItems">
-                    <button l onClick={() => downloadFiles()}>Download</button>
+                    <button onClick={() => downloadFiles()}>Download</button>
                 </div>
             </div>
             <BottomBanner screenName="Information"/>

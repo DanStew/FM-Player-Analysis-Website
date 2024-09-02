@@ -1,5 +1,5 @@
-import "./style.scss"
 import Index from "./Components/Index";
+import "./style.scss"
 
 function App() {
   return (

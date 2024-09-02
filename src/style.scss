@@ -12,15 +12,15 @@ body{
     background-color: grey;  
 }
 
-@media (min-width : 800px) {
+@media screen and (min-width : 1360px) {
     .mainTitle{
-        font-size: 80px;
-        padding: 30px;
+        font-size: 70px;
+        padding: 20px;
     }
 
     .subheading{
         font-size: 40px;
-        padding: 20px;
+        padding: 10px;
     }
 
     .regular{
@@ -31,8 +31,12 @@ body{
     button{
         padding: 20px;
     }
+
+    .transportArea{
+        flex-direction: column;
+    }
 }
-@media (max-width : 800px) {
+@media screen and (min-width : 1080px) and (max-width : 1360px) {
     .mainTitle{
         font-size: 60px;
         padding: 20px;
@@ -48,23 +52,54 @@ body{
         font-weight: 500;
         line-height: 1.5;
     }
+    button{
+        padding: 20px;
+    }
+
+    .transportArea{
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 800px) and (max-width : 1080px) {
+    .mainTitle{
+        font-size: 56px;
+        padding: 10px;
+    }
+
+    .subheading{
+        font-size: 28px;
+        padding: 5px;
+    }
+
+    .regular{
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
     
     button{
         padding: 10px;
     }
+
+    .transportArea{
+        flex-direction: column;
+    }
 }
-@media (max-width : 560px) {
+@media screen and (min-width:560px) and (max-width : 800px) {
     .mainTitle{
-        font-size: 50px;
+        font-size: 46px;
+        padding: 10px;
     }
 
     .subheading{
-        font-size: 30px;
+        font-size: 24px;
+        padding: 5px;
     }
 
     .regular{
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
+        line-height: 1.5;
     }
 
     button{
@@ -77,9 +112,6 @@ p{
     padding: 0px;
     text-align: center;
     font-weight: 600;
-
-
-    
 }
 
 .flexItems{
@@ -128,7 +160,6 @@ p{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex-direction: column;
                     gap: 20px;
 
                     .buttonsArea{

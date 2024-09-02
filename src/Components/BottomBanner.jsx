@@ -13,7 +13,7 @@ function BottomBanner({screenName}){
             <div className="bannerTop flexItems"></div>
             <div className="bannerContent flexItems">
                 <p>{screenName}</p>
-                <span class="material-symbols-outlined downArrow">arrow_downward</span>
+                <span className="material-symbols-outlined downArrow">arrow_downward</span>
             </div>
         </div>
     )
