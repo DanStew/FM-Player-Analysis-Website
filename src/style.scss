@@ -14,6 +14,8 @@ body{
 p{
     margin: 0px;
     padding: 0px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .flexItems{
@@ -36,10 +38,75 @@ p{
         //The height depends on the number of banners needing to be displayed at the same time
         &.oneBannerBody{
             height : 90vh;
+
+            //Styling the home page of the website
+            &.home{
+                box-sizing: border-box;
+                padding: 20px;
+
+                .mainTitle{
+                    height : 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    font-size: 80px;
+                }
+
+                .information{
+                    height: 50%;
+                    padding: 3%;
+                    box-sizing: border-box;
+
+                    p{
+                        font-size: 40px;
+                        font-weight: 500;
+                    }
+                }
+
+                .transportArea{
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 20px;
+                    font-size: 40px;
+
+                    .buttonsArea{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+
+                        button{
+                            padding: 20px;
+                            font-size: 32px;
+                            font-weight: 600;
+                            border-radius: 32px;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     
         &.twoBannerBody{
-            height : 80vh
+            height : 80vh;
+
+            &.photos{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 98vw;
+                gap: 20px;
+
+                p{
+                    font-size: 36px;
+                }
+            }
         }
     }
 
@@ -54,7 +121,6 @@ p{
         cursor: pointer;
 
         //Styling the font in the banners
-        text-align: center;
         color: white;
         font-size: 40px;
         font-weight: 600;
@@ -106,4 +172,51 @@ p{
         }
     }
 
+}
+
+//Implementing the styling for the photo slideshow on photos screen
+.slider{
+    width: 80vw;
+    height: 60vh;
+    margin-left: 5vw;
+    border-radius : 10px;
+    border: 2px solid black;
+    overflow: hidden;
+
+    .slides{
+        width : 500%;
+        height : 60vh;
+        display: flex;
+    
+        input{
+            display: none;
+        }
+
+        .slide{
+            width: 20%;
+            transition: 2s;
+        
+            img{
+                width: 80vw;
+                height: 60vh;
+            }
+        }
+
+        //Implementing the photo slideshow movement
+        #radio1:checked ~ .first{
+            margin-left: 0;
+        }
+        
+        #radio2:checked ~ .first{
+            margin-left: -20%;
+        }
+        
+        #radio3:checked ~ .first{
+            margin-left: -40%;
+        }
+        
+        #radio4:checked ~ .first{
+            margin-left: -60%;
+        }
+    }
 }
