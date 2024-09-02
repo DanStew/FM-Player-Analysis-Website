@@ -9,6 +9,67 @@ body{
     height : 100%;
     overflow-x: hidden;
     font-family: "Roboto", sans-serif;
+    background-color: grey;  
+}
+
+@media (min-width : 800px) {
+    .mainTitle{
+        font-size: 80px;
+        padding: 30px;
+    }
+
+    .subheading{
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .regular{
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    button{
+        padding: 20px;
+    }
+}
+@media (max-width : 800px) {
+    .mainTitle{
+        font-size: 60px;
+        padding: 20px;
+    }
+
+    .subheading{
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .regular{
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    
+    button{
+        padding: 10px;
+    }
+}
+@media (max-width : 560px) {
+    .mainTitle{
+        font-size: 50px;
+    }
+
+    .subheading{
+        font-size: 30px;
+    }
+
+    .regular{
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    button{
+        padding: 0px;
+    }
 }
 
 p{
@@ -16,6 +77,9 @@ p{
     padding: 0px;
     text-align: center;
     font-weight: 600;
+
+
+    
 }
 
 .flexItems{
@@ -34,6 +98,7 @@ p{
     background-color: grey;
 
     .mainBody{
+        width: 98vw;
         //Setting the height of the bodies to be made
         //The height depends on the number of banners needing to be displayed at the same time
         &.oneBannerBody{
@@ -50,18 +115,12 @@ p{
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    font-size: 80px;
                 }
 
                 .information{
-                    height: 50%;
+                    height: 40%;
                     padding: 3%;
                     box-sizing: border-box;
-
-                    p{
-                        font-size: 40px;
-                        font-weight: 500;
-                    }
                 }
 
                 .transportArea{
@@ -71,7 +130,6 @@ p{
                     align-items: center;
                     flex-direction: column;
                     gap: 20px;
-                    font-size: 40px;
 
                     .buttonsArea{
                         display: flex;
@@ -80,13 +138,41 @@ p{
                         gap: 20px;
 
                         button{
-                            padding: 20px;
                             font-size: 32px;
                             font-weight: 600;
                             border-radius: 32px;
                             border: none;
                             cursor: pointer;
                         }
+                    }
+                }
+            }
+
+            &.information{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+
+                .infoHeader{
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .mainInfo{
+                    height: 80%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    a{
+                        color: blue;
+                        font-style: italic;
                     }
                 }
             }
@@ -103,9 +189,53 @@ p{
                 width: 98vw;
                 gap: 20px;
 
-                p{
-                    font-size: 36px;
+                .information{
+                    height: 20%;
                 }
+
+                .slideshow{
+                    height: 80%;
+                }
+            }
+
+            &.download{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+
+                .information{
+                    height: 60%;
+                    padding: 20px;
+                    font-weight: 600;
+                    line-height: 1.5em;
+                }
+
+                .button{
+                    height: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button{
+                        height: 80%;
+                        width: 80%;
+                        background-color: rgb(66, 66, 66);
+                        font-size: 60px;
+                        font-weight: 600;
+                        color: white;
+                        border: none;
+                        border-radius: 20%;
+                        cursor: pointer;
+                        transition: background-color 1s;
+
+                        &:hover{
+                            background-color: rgb(92, 92, 92);
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -176,16 +306,16 @@ p{
 
 //Implementing the styling for the photo slideshow on photos screen
 .slider{
-    width: 80vw;
-    height: 60vh;
-    margin-left: 5vw;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
     border-radius : 10px;
     border: 2px solid black;
     overflow: hidden;
 
     .slides{
         width : 500%;
-        height : 60vh;
+        height : 100%;
         display: flex;
     
         input{
@@ -197,8 +327,8 @@ p{
             transition: 2s;
         
             img{
-                width: 80vw;
-                height: 60vh;
+                width: 100%;
+                height: 100%;
             }
         }
 

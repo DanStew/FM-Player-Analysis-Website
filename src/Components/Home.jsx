@@ -14,15 +14,15 @@ function Home(){
         <div className="screen flexItems">
             <div className="home mainBody oneBannerBody flexItems">
                 <div className="mainTitle">
-                    <p>Football Manager</p>
-                    <p>Player Analyser</p>
+                    <p className="mainTitle">Football Manager</p>
+                    <p className="mainTitle">Player Analyser</p>
                 </div>
                 <div className="information">
-                    <p>This is a Football Manager Player Analyser Application made using Python. It includes a CLI and GUI interface for the user to use and enables you to be able to generate Player Scores for players that you input into the system. The system also enable you to change the attribute rankings, to customise the player scores for your need. More infromation on how to use the system can be seen within the download folder.</p>
+                    <p className="regular">This is a Football Manager Player Analyser Application made using Python. It includes a CLI and GUI interface for the user to use and enables you to be able to generate Player Scores for players that you input into the system. The system also enable you to change the attribute rankings, to customise the player scores for your need. More infromation on how to use the system can be seen within the download folder.</p>
                 </div>
                 <div className="transportArea">
                     <div className="subheading">
-                        <p className="flexItems">Jump To : </p>
+                        <p className="subheading flexItems">Jump To : </p>
                     </div>
                     <div className="buttonsArea flexItems">
                         <button onClick={() => goToSection("Photos")}>Photos</button>

@@ -24,7 +24,7 @@ function Photos(){
             <TopBanner screenName="Home"/>
             <div className="photos mainBody twoBannerBody flexItems">
                 <div className="information">
-                    <p>Below can be seen some of the images from the GUI section of this application. This includes the HTML Output Table that will be produced when making player scores.</p>
+                    <p className="subheading">Below can be seen some of the images from the GUI section of this application. This includes the HTML Output Table that will be produced when making player scores.</p>
                 </div>
                 <div className="slideshow">
                     <div className="slider">
