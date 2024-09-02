@@ -5,9 +5,105 @@ html{
 body{
     margin: 0px;
     padding: 0px;
+    width: 100%;
+    height : 100%;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.flexItems{
+    width: 100%;
+    height: 100%;
+    flex: 1 1;
 }
 
 .section{
     height : 100vh;
     width : 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: grey;
+
+    .mainBody{
+        //Setting the height of the bodies to be made
+        //The height depends on the number of banners needing to be displayed at the same time
+        &.oneBannerBody{
+            height : 90vh;
+        }
+    
+        &.twoBannerBody{
+            height : 80vh
+        }
+    }
+
+    .banner{
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(66, 66, 66);
+        transition: background-color 1000ms;
+        cursor: pointer;
+
+        //Styling the font in the banners
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+
+        //Making the curved edges
+        &.topBanner{
+            border-radius: 0px 0px 30% 30%;
+        }
+
+        &.bottomBanner{
+            border-radius: 30% 30% 0px 0px;
+        } 
+        
+        //Styling the main area of the banner, and the icons
+        .bannerContent{
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            
+            span{
+                font-size: 40px;
+                font-weight: 600;
+                transition: transform 1s;
+            }
+        }
+
+        //Styling the edges of the banner
+        .bannerBottom, .bannerTop{
+            height: 2vh;
+            margin: -10px;
+            border-radius: 30%;
+        }
+
+        //Creating the hover animations
+        &:hover{
+            background-color: rgb(92, 92, 92);
+            .bannerContent{
+                span{
+                    &.upArrow{
+                        transform: translateY(-5px);
+                    }
+                    &.downArrow{
+                        transform: translateY(+5px);
+                    }
+                }
+            }
+        }
+    }
+
 }

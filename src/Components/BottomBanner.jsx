@@ -9,10 +9,11 @@ function BottomBanner({screenName}){
     }
 
     return(
-        <div onClick={() => goToSection()} className="banner bottomBanner flexItems">
+        <div onClick={() => goToSection()} className="bottomBanner banner flexItems">
             <div className="bannerTop flexItems"></div>
             <div className="bannerContent flexItems">
                 <p>{screenName}</p>
+                <span class="material-symbols-outlined downArrow">arrow_downward</span>
             </div>
         </div>
     )
